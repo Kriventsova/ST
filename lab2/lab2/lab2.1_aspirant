@@ -6,15 +6,27 @@ public class Aspirant extends Student {
       this. work = work;
     }
     
+   void print(){
+      System.out.println(firstName);
+   }
+    
+ @Override
+public double getScholarship() {
+  return avgMark == 5 ? 200 : 180;
+}
+
  public static void main(String[] args) {
   Student student = new Student( firstName: "Иван", lastName: "Иванов",
     group: "Group1", avgMark: 4.5); 
   Aspirant aspirant1 = new Aspirant( firstName: "Петр", lastName: "Петров", 
     group: "Group2", avgMark: 5, work: "Work1");
   Student aspirant2 = new Aspirant("Петр", "Сидоров","Group3", 4.8, "Work2");
+  Student[] students = {student, aspirant1, aspirant2};
+  for (Student s : students) {
+    System.out.println(s.getScholarship());
+   }
 }
     
-    void print(){
-      System.out.println(firstName);
-    }
+
+
 
