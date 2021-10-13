@@ -1,0 +1,5 @@
+public Student() {
+}
+public double getScholarship() {
+  return avgMark == 5 ? 100 : 80;
+}
