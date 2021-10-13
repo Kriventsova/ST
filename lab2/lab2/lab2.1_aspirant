@@ -1,0 +1,12 @@
+public class Aspirant extends Student {
+  String work;
+  
+    public Aspirant(String firstName, String lastName, String group, double avgMark, String work)
+      super(firstName, lastName, group, avgMark);
+      this. work = work;
+    }
+    
+    void print(){
+      System.out.println(firstName);
+    }
+
