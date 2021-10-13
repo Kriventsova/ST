@@ -6,6 +6,14 @@ public class Aspirant extends Student {
       this. work = work;
     }
     
+ public static void main(String[] args) {
+  Student student = new Student( firstName: "Иван", lastName: "Иванов",
+    group: "Group1", avgMark: 4.5); 
+  Aspirant aspirant1 = new Aspirant( firstName: "Петр", lastName: "Петров", 
+    group: "Group2", avgMark: 5, work: "Work1");
+  Student aspirant2 = new Aspirant("Петр", "Сидоров","Group3", 4.8, "Work2");
+}
+    
     void print(){
       System.out.println(firstName);
     }
