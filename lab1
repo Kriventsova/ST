@@ -1,0 +1,175 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+       *
+        //1.
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести целое число: ");
+        int a = in.nextInt();
+        System.out.printf("Вывод последний цифры на экран : %d \n", a%10);
+        in.close();
+        */
+
+        
+        //2.
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести целое трехзначное число : ");
+        int a = in.nextInt();
+        int sum =0;
+        int l = a%10;
+        sum= sum+l;
+        a=a/10;
+        l=a%10;
+        sum = sum+l;
+        a=a/10;
+        sum = sum+a;
+        System.out.printf("Сумма цифр трехзначного числа : %d \n", sum);
+        in.close();
+
+         
+
+        
+
+        //3.
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести целое число :");
+        int a = in.nextInt();
+        if (a > 0) a++;
+        System.out.println(a);
+        in.close();
+        
+
+        //4.
+        
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести целое число:");
+        int a = in.nextInt();
+
+        if (a>0)
+            a++;
+        else if(a<0)
+            a=a-2;
+        else
+            a=10;
+        System.out.println(a);
+        in.close();
+
+         
+        
+        //5.
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число 1: ");
+        int a = in.nextInt();
+        System.out.println("Введите число 2: ");
+        int b = in.nextInt();
+        System.out.println("Введите число 3: ");
+        int c = in.nextInt();
+        int min=a;
+        if (min > b) min = b;
+        if (min > c) min = c;
+        System.out.println(min);
+        in.close();
+         
+        //6.
+        
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести целое число:");
+        int a = in.nextInt();
+        if (a==0) System.out.println("Нулевое");
+        else{
+            if (a>0) System.out.println("Положительное ");
+            else System.out.println("Отрицательное ");
+            if ((a%2)== 0) System.out.println("Чётное ");
+            else System.out.println("Нечётное ");
+        }
+
+        System.out.println(a);
+        in.close();
+
+         
+
+        
+        //7.
+        double moscow = 4.15,rostov = 1.98, krasnodar=2.69,kirov = 5,sum,tax;
+        double minutes = 10;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести код города: ");
+        int city_code = in.nextInt();
+
+        switch(city_code)
+        {
+            case (905):
+                tax = moscow;
+                break;
+            case (194):
+                tax = rostov;
+                break;
+            case (491):
+                tax = krasnodar;
+                break;
+            case (800):
+                tax = kirov;
+                break;
+            default:
+                return;
+
+        }
+        sum = tax * minutes;
+        System.out.println(sum);
+
+         
+
+
+        
+        //9.
+        Integer[] a = { 15, 10, 51, 6, 5, 3, 10, 34, 0,32 ,56 , 12 ,24 , 52};
+        //Выводим изначальный массив
+        for (int i=0; i<a.length; i++){
+            System.out.print(a[i]);
+        }
+        System.out.println();
+
+        int n = a.length;
+        //Переменная, которая будет использоваться при обмене элементов
+        Integer ret;
+
+        for (int i = 0; i < n/2; i++) {
+            ret = a[n-i-1];
+            a[n-i-1] = a[i];
+            a[i] = ret;
+        }
+        //Конечный массив
+        for (int i=0; i<a.length; i++) {
+            System.out.print(a[i]);
+        }
+        
+        //10.
+        int[] a = new int[] {15,10,0, 6, 5,3,0, 34,0,32,56,0,24, 52};
+
+        int swapCount = 0;
+        int lastIndex = a.length-1;
+
+        for(int i = lastIndex-1; i >=0; i--) {  // skip the very last element
+            if(a[i] == 0) {
+                a[i] = a[lastIndex-swapCount];
+                a[lastIndex-swapCount] = 0;
+                swapCount++;
+            }
+        }
+
+        for(int i : a) {
+            System.out.print(i + ", ");
+        }
+
+
+
+
+
+    }
+
+
+}
