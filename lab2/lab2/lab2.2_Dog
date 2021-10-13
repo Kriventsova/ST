@@ -1,4 +1,4 @@
-package lesson9.task3;
+
 
 public class Dog extends Animal {
     private String name;
@@ -25,7 +25,7 @@ public class Dog extends Animal {
 
     @Override
     public String makeNoise() {
-        return "Гав-гав-гав!!!";
+        return "---";
     }
 
     @Override
