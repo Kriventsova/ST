@@ -1,54 +1,23 @@
 package com.company;
 
-public class Main
-{
-    public class Aspirant extends Student
-    {
-        String work;
+public class Student
+{   String firstName, lastName, group;
+    double avgMark;
 
-        public Aspirant(String firstName, String lastName, String group, double avgMark, String work)
-        {
-            super(firstName, lastName, group, avgMark);
-            this. work = work;
-        }
-    }
-    public static void main(String[] args)
-    {
-        Student student = new Student( firstName: "Иван", lastName: "Иванов", group: "Group1", avgMark: 4.5);
-        Aspirant aspirant1 = new Aspirant( firstName: "Петр", lastName: "Петров", group: "Group2", avgMark: 5, work: "Work1");
-        Student aspirant2 = new Aspirant(firstName:"Петр",lastName:"Сидоров",group:"Group3",avgMark: 4.8,work: "Work2");
-        Student[] students = {student, aspirant1, aspirant2};
-        for (Student s : students)
-        {
-            System.out.println(s.getScholarship());
-        }
-    }
-    void print(){
-        System.out.println(firstName);
+    public Student(String firstName, String lastName, String group, double avgMark) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.avgMark = avgMark;
     }
 
-    @Override
+    public Student() {
+    }
+
     public double getScholarship() {
-        return avgMark == 5 ? 200 : 180;
+        return avgMark == 5 ? 100 : 80;
     }
-    public class Student {
-        String firstName, lastName, group;
-        double avgMark;
 
-        public Student(String firstName, String lastName, String group, double avgMark) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.group = group;
-            this.avgMark = avgMark;
-        }
-
-        public Student() {
-        }
-
-        public double getScholarship() {
-            return avgMark == 5 ? 100 : 80;
-        }
-    }
 
 
 }
