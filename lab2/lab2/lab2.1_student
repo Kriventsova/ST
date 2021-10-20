@@ -1,16 +1,23 @@
-public class Student {
-  String firstName, lastName, group;
-  double avgMark;
+package com.company;
 
-  public Student(String firstName, String lastName, String group, double avgMark) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.group = group;
-    this.avgMark = avgMark;
-    
-  public Student() {
-  }
+public class Student
+{   String firstName, lastName, group;
+    double avgMark;
+//генерируем контруктор
+    public Student(String firstName, String lastName, String group, double avgMark) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.avgMark = avgMark;
+    }
+//2 конструктор
+    public Student() {
+    }
+    //метод возвращает сумму стипендии, если средняя оценка =5, то сумма 100, иначе 80
+    public double getScholarship() {
+        return avgMark == 5 ? 100 : 80;
+    }
 
-public double getScholarship() {
-  return avgMark == 5 ? 100 : 80;
+
+
 }
