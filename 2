@@ -1,23 +1,36 @@
 package com.company;
 
-public class Student
-{   String firstName, lastName, group;
-    double avgMark;
+public class Aspirant extends Student
+{
+    String work;
 
-    public Student(String firstName, String lastName, String group, double avgMark) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.group = group;
-        this.avgMark = avgMark;
+    public Aspirant(String firstName, String lastName, String group, double avgMark, String work)
+    {
+        super(firstName, lastName, group, avgMark);
+        this. work = work;
     }
 
-    public Student() {
+    public void main(String[] args)
+    {
+        Student student = new Student( firstName: "Иван", lastName: "Иванов", group: "Group1", avgMark: 4.5);
+        Aspirant aspirant1 = new Aspirant( firstName: "Петр", lastName: "Петров", group: "Group2", avgMark: 5, work: "Work1");
+        Student aspirant2 = new Aspirant("Петр", "Сидоров","Group3", 4.8, "Work2");
+        Student[] students = {student, aspirant1, aspirant2};
+        for (Student s : students)
+        {
+            System.out.println(s.getScholarship());
+        }
     }
-
-    public double getScholarship() {
-        return avgMark == 5 ? 100 : 80;
-    }
-
-
 
 }
+
+    void print(){
+        System.out.println(firstName);
+    }
+
+    @Override
+    public double getScholarship() {
+        return avgMark == 5 ? 200 : 180;
+    }
+
+
