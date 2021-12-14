@@ -1,0 +1,23 @@
+package com.company;
+
+public class Exercise17 {
+    public int noOfTriples(String stng)
+    {
+        int l = stng.length();
+        int ctr = 0;
+        for (int i = 0; i < l-2; i++)
+        {
+            char tmp = stng.charAt(i);
+            if (tmp == stng.charAt(i+1) && tmp == stng.charAt(i+2))
+                ctr++;
+        }
+        return ctr;
+    }
+    public static void main (String[] args)
+    {
+        Exercise17 m= new Exercise17();
+        String str1 =  "abbcccddddeeeeeffffff";
+        System.out.println("Исходная строка: "+str1);
+        System.out.println("Количество символов, повторяющихся три раза подряд в строке: "+m.noOfTriples(str1));
+    }
+}
