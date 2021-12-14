@@ -1,0 +1,11 @@
+package com.company;
+
+public class Exercise10 {
+    public static void main(String[] args)
+    {
+        String str ="Задание девять";
+        // Get the length of str.
+        int len = str.length();
+        System.out.println("Длина строки '"+str+"' равна: "+len);
+    }
+}
