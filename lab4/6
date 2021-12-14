@@ -1,0 +1,17 @@
+package com.company;
+
+public class Union {
+    public static void main(String[] args)
+    {
+        String str1 ="Строка 1 ";
+        String str2 ="и строка 2";
+
+        System.out.println("Строка 1: " + str1);
+        System.out.println("Строка 2: " + str2);
+
+        // Concatenate the two strings together.
+        String str3 = str1.concat(str2);
+        // Display the new String.
+        System.out.println("Объединенная строка: " + str3);
+    }
+}
