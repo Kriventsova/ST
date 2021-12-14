@@ -1,0 +1,13 @@
+package com.company;
+
+public class Exercise11 {
+    public static void main(String[] args)
+    {
+        String str ="Задание Номер ОДИННАДЦАТЬ!";
+        // Convert the above string to all lowercase.
+        String lowerStr = str.toLowerCase();
+        // Display the two strings for comparison.
+        System.out.println("Исходная строка: " + str);
+        System.out.println("Строка в нижнем регистре: " + lowerStr);
+    }
+}
