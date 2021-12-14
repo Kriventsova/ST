@@ -1,0 +1,34 @@
+package com.company;
+
+public class Exercise18 {
+    public int sumOfTheNumbers(String stng)
+    {
+        int l = stng.length();
+        int sum = 0;
+        String temp = "";
+        for (int i = 0; i < l; i++)
+        {
+            if (Character.isDigit(stng.charAt(i)))
+            {
+                if (i < l-1 && Character.isDigit(stng.charAt(i+1)))
+                {
+                    temp += stng.charAt(i);
+                }
+                else
+                {
+                    temp += stng.charAt(i);
+                    sum += Integer.parseInt(temp);
+                    temp = "";
+                }
+            }
+        }
+        return sum;
+    }
+    public static void main (String[] args)
+    {
+        Exercise18 m= new Exercise18();
+        String str1 =  "15 и 25 a 20строка";
+        System.out.println("Исходная строка: "+str1);
+        System.out.println("Сумма чисел строки: "+m.sumOfTheNumbers(str1));
+    }
+}
