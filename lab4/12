@@ -1,0 +1,11 @@
+package com.company;
+
+public class Exercise12 {
+    public static void main(String[] args)
+    {
+        String str ="Управжнение Номер Двеннадцать";
+        String upper_str = str.toUpperCase();
+        System.out.println("Исходная строка: " + str);
+        System.out.println("Строка в верхнем регистре: " + upper_str);
+    }
+}
