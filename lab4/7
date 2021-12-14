@@ -1,0 +1,11 @@
+package com.company;
+
+public class Comparison3 {
+    public static void main(String[] args) {
+        String str1 = "Задание номер семь";
+        String str2 = "семь";
+        System.out.println("Исходная строка: " + str1);
+        System.out.println("Указанная последовательность значений: " + str2);
+        System.out.println(str1.contains(str2));
+    }
+}
