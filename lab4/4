@@ -1,0 +1,32 @@
+public class Comparison1 {
+    public static void main(String[] args)
+    {
+        String str1 ="строка";
+        String str2 ="Строка";
+
+        System.out.println("String 1: " + str1);
+        System.out.println("String 2: " + str2);
+
+        // Compare the two strings.
+        int result = str1.compareTo(str2);
+        // Display the results of the comparison.
+        if (result < 0)
+        {
+            System.out.println("\"" + str1 + "\"" +
+                    " меньше чем " +
+                    "\"" + str2 + "\"");
+        }
+        else if (result == 0)
+        {
+            System.out.println("\"" + str1 + "\"" +
+                    " равно " +
+                    "\"" + str2 + "\"");
+        }
+        else // if (result > 0)
+        {
+            System.out.println("\"" + str1 + "\"" +
+                    " больше чем " +
+                    "\"" + str2 + "\"");
+        }
+    }
+}
