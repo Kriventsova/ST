@@ -1,0 +1,23 @@
+package com.company;
+import com.sun.tools.javac.Main;
+
+import java.util.*;
+public class Exercise16 {
+    public boolean firstInLast(String str)
+    {
+        if (str.length() < 2)
+            return false;
+        else if (str.substring(0,2).equals(str.substring(str.length()-2, str.length())))
+            return true;
+        else
+            return false;
+    }
+    public static void main (String[] args)
+    {
+        Exercise16 m= new Exercise16();
+        String str1 =  "ЗаданиеЗа";
+
+        System.out.println("Исходная строка: "+str1);
+        System.out.println("Первые два символа появляются в последнем: "+m.firstInLast(str1));
+    }
+}
