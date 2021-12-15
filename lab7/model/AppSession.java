@@ -1,4 +1,3 @@
-package lesson16.task2.model;
 
 import java.util.HashMap;
 import java.util.Map;
